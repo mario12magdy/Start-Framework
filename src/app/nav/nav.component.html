@@ -8,15 +8,15 @@
           </button>
           <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 w-100 mb-lg-0 justify-content-around  ">
-              <li class="nav-item">
-                <a class="nav-link text-light fw-bold  " aria-current="page" routerLink="about" routerLinkActive="rLA rounded-3">ABOUT</a>
+              <li *ngFor="let path of paths" class="nav-item">
+                <a class="nav-link text-light fw-bold  "aria-current="page" [routerLink]="path" routerLinkActive="rLA rounded-3">{{path}}</a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link text-light fw-bold " routerLink="portfolio" routerLinkActive="rLA rounded-3">PORTFOLIO</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-light  fw-bold " routerLink="contact" routerLinkActive="rLA rounded-3">CONTACT</a>
-              </li>
+              </li> -->
               
               
             </ul>
